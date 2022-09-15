@@ -1,6 +1,7 @@
 # Import a few useful containers from the typing module
 from calendar import c
 from typing import Dict, Union
+from computer import Computer
 
 # Import the functions we wrote in procedural_resale_shop.py
 from procedural_resale_shop import buy, update_price, sell, print_inventory, refurbish
@@ -10,7 +11,7 @@ from procedural_resale_shop import buy, update_price, sell, print_inventory, ref
 
     Note: because python is dynamically typed, you may not be used to seeing 
     explicit data types (str, int, etc.) listed in a python function. We're 
-    going to go the extra step, because when we get to Java it'll be required!
+    going to go the extra step, because when we get to Java it'll be required! 
 """
 def create_computer(description: str,
                     processor_type: str,
@@ -37,6 +38,11 @@ def main():
         1024, 64,
         "macOS Big Sur", 2013, 1500
     )
+    
+    computer1 = Computer("Mac Pro (Late 2013)",
+        "3.5 GHc 6-Core Intel Xeon E5",
+        1024, 64,
+        "macOS Big Sur", 2013, 1500)
 
     # Print a little banner
     print("-" * 21)
