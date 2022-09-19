@@ -6,6 +6,15 @@ class Computer:
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
     # Get attributes:
+    '''Pseudocode:
+1. Do the attributes for init (self, description, processor_type, 
+    hard_drive_capacity, memory, operating_system, year_made, price):
+2. Initialize the init self.whatever = whatever
+3. Do the attributes for update_price (self, inventory, item_id: int, new_price: int)
+4. Do the attributes for refurbish (self, inventory, item_id: int, new_os: Optional[str] = None)
+
+
+'''
     def __init__(self, description, processor_type, 
     hard_drive_capacity, memory, operating_system, year_made, price):
         self.description = description
@@ -37,7 +46,10 @@ class Computer:
             'price': price
     } '''
 
-#Why does the self.inventory work if it's not defined in this file? 
+
+#Why does the item_id work if it's not defined in this file? 
+
+
     def update_price(self, inventory, item_id: int, new_price: int):
         if item_id in self.inventory:
              self.inventory[item_id]["price"] = new_price
